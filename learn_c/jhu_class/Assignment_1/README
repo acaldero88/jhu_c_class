@@ -1,0 +1,7 @@
+ps aux | grep ^root | sort | uniq | wc - 
+
+This command passes all the processes of user x to the grep command, which is a search command that is looking for any lines that contain root in the.  After the serach is executed the output goes into the sort command which sorts the processes and passes this to uniq command which will omit or report 	repeated lines, and this is in turn passed to the command WC.  The wc -l will count and print out the number of newlines.
+
+The freq.c file can be complied  trivially by calling the compiler in the shell and running gcc freq.c -std=c99 -pedantic -Wall -Wextra -o freq, and the program will create an executablethat will run with the ./ command.  You have to make sure there is input given that this program sorts files for characters and counts them.  In this README there is a file named input that has characters to use as a dummy input.  The  command should look like ./freq < input .  
+
+An alternative option to compile is to use the make file.  All you need to do is call make and sicne the make file is named makefile it will default to make that file.  You can then follow the same procedures in order to run the executable. Make files are useful for compiling programs with multiple source files that may not need to compile every time and it saves time to type the compile arguments once in your make file as opposed to having to retype warnings.
